@@ -18,7 +18,6 @@ const originData = [];
 
 const DataTable = () => {
   let [data, setData] = useState(originData);
-  const [filter, setFilter] = useState("");
   const [editingKey, setEditingKey] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -71,14 +70,6 @@ const DataTable = () => {
     },
   ];
 
-  // data =
-  //   data &&
-  //   data.filter((item) => {
-  //     return Object.keys(item).some((date) =>
-  //       item[date].toLowerCase().includes(filter)
-  //     );
-  //   });
-
   //date custom filter
   const handleFilterDate = (date, field) => {
     // data = data["england-and-wales"].events;
@@ -126,8 +117,6 @@ const DataTable = () => {
 
     setData(filteredData);
   };
-
-  //
 
   return (
     <div>
